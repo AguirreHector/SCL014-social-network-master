@@ -1,19 +1,21 @@
 export const registro = () => {
     const registro = document.createElement('div');
-    const formularioRegistro = `<div class="contenedor">
+    const formularioRegistro = `
     <div class="encabezado">
-        <h2 class="logo">petsitter</h2>
-        <a href=""></a>
+        <a href="#/inicial2" class="aLogo"><h2 class="logo">petsitter</h2></a>
     </div>
-    <div class="cuerpo">
-        <h3 class="declaracion">Petsitter conecta a cuidadores con ese integrante no humano de la familia al que tanto queres</h3>
-        <input id="nombreRegistro" type="nombre" placeholder="nombre">
-        <input id="emailRegistro" type="email" placeholder="correo electrónico">
-        <input id="contrasenaRegistro" type="password" placeholder="contraseña">
-        <button id="entrar">Registrarme</button>
-
+    <div class="contenedor">
+        <div class="cuerpo">
+            <h3 class="invitaRegistro">Este registro te llevará sólo unos segundos.</h3>
+            <div class="contieneFormularioRegistro">
+                <input id="nombreRegistro" type="text" placeholder="nombre">
+                <input id="emailRegistro" type="email" placeholder="correo electrónico">
+                <input id="contrasenaRegistro" type="password" placeholder="contraseña">
+                <input id="repiteContrasenaRegistro" type="password" placeholder="repite tu contraseña">
+                <a href="#/inicial2"><button id="registrarme" class="boton">Registrarme</button></a>
+            </div>
+        </div>
     </div>
-</div>
     `
 
     registro.innerHTML = formularioRegistro;

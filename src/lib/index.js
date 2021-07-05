@@ -7,26 +7,31 @@ export const entrar = () => {
     .then((userCredential) => {
     // Signed in
     var user = userCredential.user;
-    console.log("you're in");
+    console.log("estas dentro");
     // ...
 })
     .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
+    alert("hay bardo maru");
     console.log("hay bardo marido");
 
 });
 
 }
+
+
 export const registrar = () => {
+
     let emailRegistro = document.getElementById('emailRegistro').value;
     let contrasenaRegistro = document.getElementById('contrasenaRegistro').value;
-
+  
+    console.log("sí entró acá");
     firebase.auth().createUserWithEmailAndPassword(emailRegistro, contrasenaRegistro)
     .then((userCredential) => {
       // Signed in
         var user = userCredential.user;
-        console.log("your user is created");
+        console.log("TU USUARIO fue creado");
       // ...
     })
     .catch((error) => {
@@ -36,6 +41,10 @@ export const registrar = () => {
       // ..
     });
 }
+
+
+
+
 
 function observador(){
   firebase.auth().onAuthStateChanged((user) => {
